@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+.hidden {
+  display: none;
+}
+body {
+  display: flexbox;
+}
+.index-header {
+  background: rgba(0, 0, 0, 0.15) url("image/DSC-1.jpg");
+  background-blend-mode: darken;
+  background-blend-mode: rgba(0, 0, 0, 0.2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: calc(100vw); */
+  height: 100vh;
+  transition: linear 1s;
+}
+
+.navibar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.logo {
+  display: inline-flex;
+  margin: 1vh 1vw;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.logo p {
+  margin-left: 1vw;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.logo p:hover {
+  cursor: default;
+}
+.navihead {
+  display: inline-flex;
+  background-color: #073c64;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  height: 120px;
+}
+.navihead ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 2vw;
+}
+.navihead li {
+  list-style: none;
+  margin: 1vw;
+}
+.navihead ul li a {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2px;
+  transition: all linear 0.5s;
+}
+.navihead ul li a:after {
+  content: "";
+  position: absolute;
+  background-color: #fdcb2c;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: ease-out 0.3s;
+}
+.navihead ul li a:hover:after {
+  width: 100%;
+}
+.navihead ul li a:hover {
+  color: #fdcb2c;
+}
+.navicenter {
+  margin-top: 40vh;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.nav-btn {
+  margin: 25px;
+  display: none;
+}
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+/* .navicenter-1{
+    background: url('DSC-1.jpg');
+    background-repeat: no-repeat;
+    
+}
+.navicenter-2{
+    background: url('DSC-2.jpg');
+        background-repeat: no-repeat;
+
+}
+.navicenter-3{
+    background: url('DSC-3.jpg');
+        background-repeat: no-repeat;
+
+}
+.navicenter-4{
+    background: url('DSC-4.jpg');
+        background-repeat: no-repeat;
+
+}
+.navicenter-5{
+    background: url('DSC-5.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+
+} */
+.navicenter h1 {
+  font-size: 35px;
+  color: white;
+  background: #114aadb9;
+  clip-path: polygon(0% 0%, 100% 0, 100% 0, 95% 100%, 0% 100%);
+  padding: 2vh 2vw;
+  width: 60vw;
+  height: 10vh;
+  transition: ease-in-out 0.6s;
+}
+.navicenter h5 {
+  font-size: 25px;
+  color: #fefefe;
+  background: rgba(130, 174, 220, 0.85);
+  clip-path: polygon(0% 0%, 100% 0, 100% 0, 95% 100%, 0% 100%);
+  padding: 2vh 2vw;
+  width: 50vw;
+  height: 5vh;
+  animation: ease-in-out 0.6s;
+  animation-delay: 0.1s;
+}
+/* .navifoot{
+    position: absolute;
+    margin: 22vh 2vw;
+    }
+.navifoot ul{
+    display: flex;
+    flex-direction: column;
+}
+.navifoot ul li {
+    list-style: none;
+    margin:2vh 1vw;
+    transition: all linear 1s;
+}
+.navifoot ul li :hover{
+    transition: all linear 0.4s;
+    padding-left: 40px;
+}
+.navifoot ul li a{
+    display: inline;
+    text-decoration: none;
+    color:black;
+    background-color:white;
+    padding: 7px 15px;
+
+} */
+.box1 {
+  display: flex;
+  flex-direction: row;
+  margin: 1vh 2vw;
+}
+.card {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: aliceblue;
+  border: 2px solid aliceblue;
+  border-radius: 6px;
+  box-shadow: 0 10px 10px 10px rgba(22, 22, 22, 0.3);
+  /* clip-path: polygon(67% 3%,70% 0%,66% 3%,100% 3%,100% 100%,0 100%,0% 70%,0 3%); */
+  color: #000;
+  margin-top: 75px;
+  transition: all linear 0.5s;
+  position: absolute;
+  right: 1%;
+  z-index: 5;
+}
+.card-content li {
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px 0px 10px 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+.card-content li a {
+  text-decoration: none;
+  color: #222;
+  padding: 20px;
+  transition: all linear 0.2s;
+  font-weight: bold;
+}
+.card-content li a:hover {
+  color: #c45f17;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#acadmic-card {
+  right: 30%;
+}
+#exam-card {
+  width: 170px;
+  right: 24%;
+  top: 20%;
+}
+#campus-card {
+  right: 24%;
+  width: 120px;
+}
+#club-card {
+  right: 16%;
+}
+.news {
+  display: flex;
+  width: 40vw;
+  height: 70vh;
+  background: #000;
+  color: #fefefe;
+  margin: 1vh 2vw;
+}
+.newsnav ul {
+  display: flex;
+  flex-direction: row;
+}
+.newsnav ul li {
+  list-style: none;
+}
+main {
+  height: 100vh;
+}
+.uprarrow {
+  text-decoration: none;
+  height: 25px;
+  color: #000;
+  background-color: #c45f17;
+  font-size: 25px;
+  font-weight: bolder;
+  float: right;
+  border: 2px solid #c45f17;
+  border-radius: 5px;
+  /* clip-path: circle(40% at 50% 54%); */
+  box-shadow: 0px 0px 5px 5px rgba(2, 2, 2, 0.18);
+  padding: 15px;
+  position: fixed;
+  /* top: 90%; */
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  transition: all linear 0.2s;
+}
+.uparrow:active {
+  background: white;
+  border: 2px solid #c45f17;
+}
+footer {
+  /* height:60vh; */
+  background: #073c64;
+}
+.connect {
+  color: #fdcb2c;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 64px;
+  font-family: "Architects Daughter", cursive;
+}
+.footer-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  margin: 1vh 1vw;
+  align-items: center;
+  text-align: center;
+}
+.footer-logo p {
+  margin-left: 1vw;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #fff;
+}
+.social {
+  width: 64vw;
+  display: flex;
+  justify-content: center;
+}
+.fa {
+  padding: 16px 8px;
+  font-size: 30px;
+  width: 30px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 20px;
+  transform: scale(1.5);
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.9;
+  transform: scale(1.5);
+  /* transform: rotate(360deg); */
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-home {
+  color: white;
+}
+.fa-home:hover {
+  transform: scale(1.5);
+}
+.links {
+  margin-right: 10px;
+  width: 20vw;
+  color: #fdcb2c;
+}
+.links ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.links ul li {
+  list-style: none;
+  margin: 20px;
+}
+.links ul li a {
+  color: #fefefe;
+  text-decoration: none;
+}
+.rights {
+  text-align: center;
+  font-size: 20px;
+  color: #fefefe;
+  padding: 20px 0;
+}
+@media screen and (max-width: 823px) {
+  .navibar ul {
+    display: none;
+  }
+  .nav-btn {
+    display: inline;
+  }
+  .uprarrow {
+    bottom: 30px;
+    right: 30px;
+  }
+}
