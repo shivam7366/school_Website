@@ -480,11 +480,23 @@ footer {
   .fa {
     padding: 0;
     background: none;
+    margin: 20px 15px;
+    align-items: center;
   }
   .respo-social {
     display: block;
   }
   .responsive-footerbox {
     display: block;
+  }
+  .navicenter h1 {
+    font-size: 20px;
+    height: 50px;
+    width: 300px;
+  }
+  .navicenter h5 {
+    font-size: 15px;
+    height: 30px;
+    width: 250px;
   }
 }
