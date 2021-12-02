@@ -415,6 +415,7 @@ footer {
   width: 20vw;
   color: #fdcb2c;
 }
+
 .links ul {
   display: flex;
   flex-direction: row;
@@ -437,6 +438,10 @@ footer {
 .responsive-footerbox {
   display: flex;
   flex-direction: column;
+  display: none;
+}
+.respo-social {
+  display: none;
 }
 .respo-links ul {
   display: flex;
@@ -475,5 +480,11 @@ footer {
   .fa {
     padding: 0;
     background: none;
+  }
+  .respo-social {
+    display: block;
+  }
+  .responsive-footerbox {
+    display: block;
   }
 }
