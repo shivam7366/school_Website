@@ -6,14 +6,15 @@
   font-family: "Raleway", sans-serif;
   scroll-behavior: smooth;
 }
-::-webkit-scrollbar {
-  width: 5px;
-}
+/* ::-webkit-scrollbar {
+  width: 0px;
+} */
 .hidden {
   display: none;
 }
 body {
   display: flexbox;
+  width: 100vw;
 }
 .index-header {
   background: rgba(0, 0, 0, 0.15) url("image/DSC-1.jpg");
@@ -433,6 +434,28 @@ footer {
   color: #fefefe;
   padding: 20px 0;
 }
+.responsive-footerbox {
+  display: flex;
+  flex-direction: column;
+}
+.respo-links ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.respo-links ul li {
+  list-style: none;
+  margin: 20px;
+  margin-top: 10px;
+}
+.respo-links ul li a {
+  color: #fefefe;
+  text-decoration: none;
+}
+.respo-links h2 {
+  color: #fdcb2c;
+  margin-left: 20px;
+}
 @media screen and (max-width: 823px) {
   .navibar ul {
     display: none;
@@ -441,7 +464,16 @@ footer {
     display: inline;
   }
   .uprarrow {
-    bottom: 30px;
-    right: 30px;
+    display: none;
+  }
+  .footer-box {
+    display: none;
+  }
+  .connect {
+    font-size: 35px;
+  }
+  .fa {
+    padding: 0;
+    background: none;
   }
 }
